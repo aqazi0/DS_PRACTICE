@@ -1,0 +1,1 @@
+{"name":"Local: subarray_sum","url":"c:\\Users\\Abdullah Qazi\\Desktop\\DS_PRACTICE\\DS_PRACTICE\\CPP\\subarray_sum.cpp","tests":[{"id":1624637379052,"input":"5\n0\n1\n2\n3\n4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Abdullah Qazi\\Desktop\\DS_PRACTICE\\DS_PRACTICE\\CPP\\subarray_sum.cpp","group":"local","local":true}

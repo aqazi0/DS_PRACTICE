@@ -1,0 +1,1 @@
+{"name":"Local: insertion_sort","url":"c:\\Users\\Abdullah Qazi\\Documents\\CPP\\insertion_sort.cpp","tests":[{"id":1624554758188,"input":"5\n12\n45\n23\n56\n8","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Abdullah Qazi\\Documents\\CPP\\insertion_sort.cpp","group":"local","local":true}
