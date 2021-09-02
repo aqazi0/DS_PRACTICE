@@ -2,27 +2,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// int largest_sum(int a[], int n){
-//     int l=INT_MIN,s=0,st=0,end_index;
-//     for(int j=0;j<2;j++){
-//         for(int i=0;i<n;i++){
-//             s=s+a[i];
-//             if(s>l){
-//                 l=s;
-//             }
-//             if(i==end_index)
-//             break;
-//             if(s<0){
-//                 s=0;
-//                 st=i+1;
-//             }
-//         }
-//         end_index=st;
-//         if(s==0||l+a[0]<0)
-//         break;
-//     }
-//     return l;
-// }
 
 int kadane(int a[],int n){
     int l=INT_MIN,s=0;

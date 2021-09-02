@@ -5,12 +5,13 @@ int pairsum(int a[],int n,int k)
 {
     sort(a,a+n);
     int low=0,high=n-1;
-    while(low<high){
+    while(low<=high){
         if(a[low]+a[high]==k){
-            cout<<low<<"  "<<high;
             return true;
         }
+        else if(a[low]+a[high]<k)
         low++;
+        else
         high--;
     }
     return false;
