@@ -65,9 +65,8 @@ class Union_Intersection {
         n=in.nextInt();
         int[] a=new int[m];
         System.out.println("Enter elements in A");
-        for(int i=0;i<m;i++){
+        for(int i=0;i<m;i++)
             a[i]=in.nextInt();
-        }
         int[] b=new int[n];
         System.out.println("Enter elements in B");
         for(int i=0;i<n;i++){
