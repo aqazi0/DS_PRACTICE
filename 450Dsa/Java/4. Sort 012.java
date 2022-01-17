@@ -10,9 +10,8 @@ class Sort_012 {
         Scanner in=new Scanner(System.in);
         int[] a=new int[10];
         System.out.println("Enter 10 elements");
-        for(int i=0;i<10;i++){
+        for(int i=0;i<10;i++)
             a[i]=in.nextInt();
-        }
         int l=0, m=0, h=9;
         while(m<=h){
             if(a[m]==0){
