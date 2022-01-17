@@ -1,7 +1,16 @@
 import java.util.*;
 class sum_contiguous_Subarray {
-    public static void sum_Subarray(int[] a){
-
+    public static int kadane(int[] a){
+        int max_sum=a[0];
+        int sum=0;
+        for(int i=0;i<a.length;i++){
+            sum=sum+a[i];
+            if(sum>max_sum)
+                max_sum=sum;
+            if(sum<=0)
+                sum=0;
+        }
+        return max_sum;
     }
     public static void main(String args[]){
         Scanner in=new Scanner(System.in);
@@ -12,7 +21,7 @@ class sum_contiguous_Subarray {
         for(int i=0;i<m;i++){
             a[i]=in.nextInt();
         }
-        sum_Subarray(a);
+        System.out.println(kadane(a));
         in.close();
     }
 }
