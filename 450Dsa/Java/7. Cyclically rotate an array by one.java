@@ -7,9 +7,8 @@ class Cyclically_rotate_array_by_one {
             i--;
         }
         a[0]=k;
-        for(i=0;i<10;i++){
+        for(i=0;i<10;i++)
             System.out.println(a[i]);
-        }
     }
     public static void main(String args[]){
         Scanner in=new Scanner(System.in);
