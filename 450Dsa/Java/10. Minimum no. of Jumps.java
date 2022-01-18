@@ -1,29 +1,28 @@
 import java.util.*;
 class Minimum_no_of_Jumps {
     public static int jumps(int[] a){
-        int i=0, max=0, n=0;
-        while(i<a.length-1){
-            int k=i+a[i];
+        if(a.length==0)
+            return 0;
+        int i=0, max=0, n=1, k=i+a[i];
+        while(k<a.length-1){
+            if(k==i)
+                return -1;
             max=i+1;
-            if(k>a.length-1){
-                n++;
-                break;
-            }
-            for(int j=i+1;j<k;j++){
-                if(a[max]>a[j])
-                max=j;
-            }
-            System.out.println(max);
-            i=i+max;
+            for(int j=i+1;j<=k;j++){
+                if(j+a[j]>=max+a[max])
+                        max=j;
+                }
+            i=max;
+            k=i+a[i];
             n++;
         }
         return n;
     }
     public static void main(String args[]){
         Scanner in=new Scanner(System.in);
-        int[] a = new int[10];
         System.out.println("Enter no of elements");
         int n=in.nextInt();
+        int[] a = new int[n];
         System.out.println("Enter elements");
         for(int i=0;i<n;i++){
             a[i]=in.nextInt();
