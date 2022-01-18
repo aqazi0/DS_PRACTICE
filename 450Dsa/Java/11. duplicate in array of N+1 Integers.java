@@ -8,7 +8,6 @@ class DuplicateI {
             for(int i=0;i<a.length;i++)
                 if(a[i]<=mid)
                     c++;
-            System.out.println(l +"   "+h);
             if(c>mid)
                 h=mid;
             else
