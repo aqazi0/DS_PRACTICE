@@ -44,7 +44,6 @@ class Merge_Interval {
                 a[i][j]=in.nextInt();
             }
         }
-        Sort2DArrayBasedOnColumnNumber(a, 1);
         Merge(a);
         // for(int i=0;i<a.length;i++){
         //     for(int j=0;j<2;j++){
