@@ -1,0 +1,68 @@
+import java.util.*;
+class alternating_positive_and_negative {
+    public static void swap(int[] a, int i, int j){
+        int t=a[i];
+        a[i]=a[j];
+        a[j]=t;
+    }
+    public static void print(int[] a){
+        for(int i=0;i<a.length;i++)
+            System.out.print(a[i]+"  ");
+        System.out.println();
+    }
+    public static void rotate(int[] a, int i, int l){
+        int n=l-i, j;
+        int[] k=new int[n];
+        for(j=0;j<n;j++)
+            k[j]=a[i+j];
+        for(j=l;j<a.length;j++){
+            a[i++]=a[j];
+        }
+        for(j=i;j<a.length;j++){
+            a[j]=k[j-i];
+        }
+    }
+    public static void arrange(int[] a){
+            int l=0, h=a.length-1;
+            while(l<h){
+                if(a[l]<0){
+                    l++;
+                }
+                else{
+                    swap(a, l, h);
+                    h--;
+                }
+            }
+            if(a[l]<0){
+                l++;
+                h++;
+            }
+            if(l%2!=0 && (h+1) < a.length)
+                h++;
+            int i=1;
+            while(i<l && h<a.length){
+                if(i%2!=0){
+                    swap(a, i, h);
+                    h=h+2;
+                }
+                i++;
+            }
+            if(l%2!=0)
+                l--;
+            if(i<l)
+                rotate(a, i, l);
+            print(a);
+    }
+    public static void main(String args[]){
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter no of elements");
+        int n=in.nextInt();
+        int[] a = new int[n];
+        System.out.println("Enter elements");
+        for(int i=0;i<n;i++){
+            a[i]=in.nextInt();
+        }
+        arrange(a);
+        in.close();
+    }
+}
