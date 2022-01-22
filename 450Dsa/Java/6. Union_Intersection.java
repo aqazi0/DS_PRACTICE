@@ -3,6 +3,7 @@ class Union_Intersection {
     public static void Union(int[] a, int[] b, int m, int n, int[] c){
         int i=0, j=0, k=0;
         while(i<m && j<n){
+            if(k==0){
             if(a[i]==b[j]){
                 c[k]=a[i];
                 i++;
@@ -18,15 +19,39 @@ class Union_Intersection {
             }
             k++;
         }
-        if(i<m){
-            while(i<m){
-                c[k++]=a[i++];
+        else{
+            if(a[i]==b[j]){
+                if(a[i]!=c[k-1])
+                    c[k++]=a[i];
+                i++;
+                j++;
+            }
+            else if(a[i]<b[j]){
+                if(a[i]!=c[k-1])
+                    c[k++]=a[i];
+                i++;
+            }
+            else{
+                if(a[i]!=c[k-1])
+                    c[k++]=b[j];
+                j++;
             }
         }
-        if(j<n){
-            while(i<m){
-                c[k++]=b[j++];
-            }
+        }
+        System.out.println(i+"  "+j);
+        while(i<m){
+            if(k==0)
+                c[k++]=a[i];
+            if(k>0 && a[i]!=c[k-1])
+                c[k++]=a[i];
+            i++;
+        }
+        while(j<n){
+            if(k==0)
+                c[k++]=b[j];
+            if(k>0 && b[j]!=c[k-1])
+                c[k++]=b[j];
+            j++;
         }
         System.out.println("Element after Union : ");
         i=0;
@@ -39,10 +64,12 @@ class Union_Intersection {
         int i=0, j=0, k=0;
         while(i<m && j<n){
             if(a[i]==b[j]){
-                d[k]=a[i];
+                if(k==0)
+                    d[k++]=a[i];
+                else if(k>0 && a[i]!=d[k-1])
+                    d[k++]=a[i];
                 i++;
                 j++;
-                k++;
             }
             else if(a[i]<b[j]){
                 i++;
