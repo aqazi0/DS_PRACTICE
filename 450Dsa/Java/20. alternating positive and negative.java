@@ -23,35 +23,10 @@ class alternating_positive_and_negative {
         }
     }
     public static void arrange(int[] a){
-            int l=0, h=a.length-1;
-            while(l<h){
-                if(a[l]<0){
-                    l++;
-                }
-                else{
-                    swap(a, l, h);
-                    h--;
-                }
-            }
-            if(a[l]<0){
-                l++;
-                h++;
-            }
-            if(l%2!=0 && (h+1) < a.length)
-                h++;
-            int i=1;
-            while(i<l && h<a.length){
-                if(i%2!=0){
-                    swap(a, i, h);
-                    h=h+2;
-                }
-                i++;
-            }
-            if(l%2!=0)
-                l--;
-            if(i<l)
-                rotate(a, i, l);
-            print(a);
+        int i=0;
+        while(i<a.length){
+            
+        }
     }
     public static void main(String args[]){
         Scanner in=new Scanner(System.in);

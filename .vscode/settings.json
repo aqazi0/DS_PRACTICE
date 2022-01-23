@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
+        "CPP/Array",
         "450Dsa/Java",
-        "CPP/Array"
+        "Java"
     ]
 }
