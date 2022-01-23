@@ -35,5 +35,6 @@ class reverse_algorithm {
         int k=in.nextInt();
         left_rotate(a,k);
         print(a);
+        in.close();
     }
 }
