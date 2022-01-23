@@ -1,11 +1,15 @@
+//to be done using hashing
 import java.util.*;
 class Subarray_with_0_sum {
     public static boolean IsSumZero(int[] a){
-        int i=0, s=0;
-        while(i<a.length){
-            s=s+a[i];
-            if(s==0)
-                return true;
+        int i, j, s=0;
+        for(i=0;i<a.length;i++){
+            for(j=i;j<a.length;j++){
+                s=s+a[j];
+                if(s==0)
+                    return true;
+            }
+            s=0;
         }
         return false;
     }
