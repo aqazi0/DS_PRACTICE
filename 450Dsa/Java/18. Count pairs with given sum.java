@@ -1,3 +1,4 @@
+//to be done using hashing
 import java.util.*;
 class Count_pairs_with_given_sum {
     public static int getPairsCount(int[] a, int k){
