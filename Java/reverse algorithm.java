@@ -23,9 +23,17 @@ class reverse_algorithm {
             reverse(a, 0, a.length);
     }
     public static void main(String args[]){
-        int a[]={1, 4, 6, 1, 9, 8, 3, 2, 6};
-        int d=3;
-        left_rotate(a,d);
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter no of elements");
+        int n=in.nextInt();
+        int[] a = new int[n];
+        System.out.println("Enter elements");
+        for(int i=0;i<n;i++){
+            a[i]=in.nextInt();
+        }
+        System.out.println("Enter k");
+        int k=in.nextInt();
+        left_rotate(a,k);
         print(a);
     }
 }
