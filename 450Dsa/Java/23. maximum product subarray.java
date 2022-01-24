@@ -1,7 +1,7 @@
 import java.util.*;
 class maximum_product_subarray {
     public static long maxProduct(int[] a){
-        int l=1, r=1, max=0;
+        int l=1, r=1, max=a[0];
         for(int i=0;i<a.length;i++){
             l=l*a[i];
             r=r*a[a.length-i-1];
