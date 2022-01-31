@@ -2,25 +2,19 @@ import java.util.*;
 class Smallest_Subarray_with_sum_greater_than_a_given_value {
     public static int smallestSubWithSum(int a[], int n, int x)
     {
-        int sum, minc=n+1, c=0;
-        for(int i=0;i<n;i++){
-            sum=a[i];
-            c=1;
+        int i=0, j=0, sum=0, ans=a.length+1;
+        while(i<n || sum>=x){
             if(sum>=x){
-                return c;
+                ans=Math.min(ans, i-j);
+                sum=sum-a[j];
+                j++;
             }
-            for(int j=i+1;j<n;j++){
-                sum+=a[j];
-                c++;
-                if(sum>=x){
-                    break;
-                }
-            }
-            if(c<minc && sum>=x){
-                minc=c;
+            else{            
+                sum=sum+a[i];
+                i++;
             }
         }
-        return minc;
+        return ans;
     }
     public static void main(String args[]){
         Scanner in=new Scanner(System.in);
