@@ -19,9 +19,8 @@ class Minimize_the_Heights_II {
         int m=in.nextInt();
         System.out.println("Enter numbers in array");
         int[] arr=new int[m];
-        for(int i=0;i<m;i++){
+        for(int i=0;i<m;i++)
             arr[i]=in.nextInt();
-        }
         System.out.println("Enter k");
         int k=in.nextInt();
         System.out.println(getMinDiff(arr, m, k));
