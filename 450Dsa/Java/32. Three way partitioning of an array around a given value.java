@@ -34,9 +34,8 @@ class Three_way_partitioning_of_an_array_around_a_given_value {
         int m=in.nextInt();
         System.out.println("Enter numbers in array");
         int[] arr=new int[m];
-        for(int i=0;i<m;i++){
+        for(int i=0;i<m;i++)
             arr[i]=in.nextInt();
-        }
         System.out.println("Enter a");
         int a=in.nextInt();
         System.out.println("Enter b");
