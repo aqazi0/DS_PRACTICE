@@ -1,6 +1,6 @@
 import java.util.*;
 class Median_of_two_sorted_arrays_of_same_size {
-    static int getMedian(int a[], int b[], int n){
+    static double getMedian(int a[], int b[], int n){
         int i=0, j=0, c=1, n1=-1, n2=-1;
         while(i<n && j<n && c<=n+1){
             if(a[i]>=b[j]){
@@ -23,7 +23,7 @@ class Median_of_two_sorted_arrays_of_same_size {
             n2=b[j];
         if(j==n && n2==-1)
             n2=a[i];
-        return (n1+n2)/2;
+        return (n1+n2)/2.0;
     }
     public static void main(String args[]){
         Scanner in=new Scanner(System.in);
