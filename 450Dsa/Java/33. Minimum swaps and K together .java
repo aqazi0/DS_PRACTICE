@@ -1,29 +1,27 @@
 import java.util.*;
 class Minimum_swaps_and_K_together  {
-    public static void swap(int[] a, int i, int j){
-        int t=a[i];
-        a[i]=a[j];
-        a[j]=t;
-    }
     public static int minSwap(int[] a, int n, int k) {
-        int i=0, j=0, c=0, f=0;
-        for(i=0;i<n;i++){
-            if(f==1 && a[i]>k){
-                j=i;
-                break;
+        int i=0, j, c=0, b=0;
+            for(i=0;i<n;i++){
+                if(a[i]<=k)
+                    c++;
             }
-            if(a[i]<=k)
-                f=1;
-        }
-        while(i<n){
-            if(a[i]<=k){
-                swap(a, i, j);
-                c++;
-                j++;
+            for(i=0;i<c;i++){
+                if(a[i]>k)
+                    b++;
             }
-            i++;
-        }
-        return c;
+            i=0;
+            j=c;
+            int ans=b;
+            while(j<n){
+                System.out.print(ans+"   ");
+                if(a[i]>k)c--;
+                if(a[j]>k)c++;
+                ans=Math.min(ans, c);
+                i++;j++;
+            }
+            System.out.println();
+            return ans;
     }
     public static void main(String args[]){
         Scanner in=new Scanner(System.in);
