@@ -21,7 +21,6 @@ class Factorials_of_large_numbers {
             ans.add(n1%10);
             n1=n1/10;
         }
-        int j=0,c=0;
         for(int i=N-1;i>0;i--){
             multiply(ans, i);
         }
