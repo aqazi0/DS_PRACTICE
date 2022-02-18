@@ -57,9 +57,8 @@ class Spiral_traversing_array{
             int[][] a = new int[m][n];
         System.out.println("Enter elements");
         for(int i=0;i<m;i++){
-            for(int j=0;j<n;j++){
+            for(int j=0;j<n;j++)
                 a[i][j]=in.nextInt();
-            }
         }
         System.out.println(spirallyTraverse(a, a.length, a[0].length));
         in.close();
