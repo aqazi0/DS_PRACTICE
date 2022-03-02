@@ -10,9 +10,8 @@ class Sorted_Matrix{
         Collections.sort(ans);
         int k=0;
         for(int i=0;i<N;i++){
-            for(int j=0;j<N;j++){
+            for(int j=0;j<N;j++)
                 Mat[i][j]=ans.get(k++);
-            }
         }
         return Mat;
     }
