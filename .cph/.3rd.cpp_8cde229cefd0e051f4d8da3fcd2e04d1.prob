@@ -1,0 +1,1 @@
+{"name":"Local: 3rd","url":"c:\\Users\\Abdullah Qazi\\Desktop\\DS_PRACTICE\\3rd.cpp","tests":[{"id":1646909262267,"input":"4\n2\n5\n7\n9\n4\n2 9\n7 2\n7 9","output":"2 7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Abdullah Qazi\\Desktop\\DS_PRACTICE\\3rd.cpp","group":"local","local":true}
