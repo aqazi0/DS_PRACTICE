@@ -18,7 +18,7 @@ class alternating_positive_and_negative {
         while(i<a.length){
             int j=i;
             while(j<a.length){
-                if((i%2==0 && a[j]<0) || (i%2!=0 && a[j]>=0))
+                if((i%2==0 && a[j]>=0) || (i%2!=0 && a[j]<0))
                 {
                     if(i!=j)
                     rotate(a, i, j);
